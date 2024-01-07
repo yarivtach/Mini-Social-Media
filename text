@@ -1,0 +1,22 @@
+
+mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="7777 tpc"
+
+
+./bin/StompWCIClient 
+login 127.0.0.1:7777 megni films
+
+join germany_japan
+
+join Germany_Japan
+
+report data/events1_partial.json
+
+summary germany_japan megni ido.txt
+
+report data/events1.json
+
+summary Germany_Japan megni ido.txt
+
+mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="7777 tpc"
+
+mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.stomp.StompServer" -Dexec.args="7777 reactor"
